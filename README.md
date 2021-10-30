@@ -13,7 +13,7 @@
 
 经过部门内小伙伴的讨论，最终采取导出环境变量的方式来解放运维的生产力。
 
-在前端代码中使用到的环境变量（满足 `vite envPrefix`条件的），全部导出到指定文件，并且加以文档描述各字段用途（通过 rollup copy 插件实现）；
+在前端代码中使用到的环境变量（满足 `vite envPrefix`条件的），全部导出到指定文件，并且加以文档描述各字段用途（通过 [rollup copy](https://github.com/vladshcherbin/rollup-plugin-copy) 插件实现）。
 
 接着前端需要通过 AJAX 的方式，请求到该配置文件并使用：
 
