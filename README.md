@@ -4,7 +4,7 @@
 
 [![npm version](https://badge.fury.io/js/@w6s%2Fexport-env-json.svg)](https://badge.fury.io/js/@w6s%2Fexport-env-json) [![Test](https://github.com/WorkPlusFE/vite-plugin-export-env-json/actions/workflows/test.yml/badge.svg)](https://github.com/WorkPlusFE/vite-plugin-export-env-json/actions/workflows/test.yml)
 
-## 目的
+## 动机
 
 [我司](https://workplus.io)前端项目开发目前在部署上存在以下问题：
 
@@ -13,7 +13,9 @@
 
 经过部门内小伙伴的讨论，最终采取导出环境变量的方式来解放运维的生产力。
 
-在前端代码中使用到的环境变量（满足 `vite envPrefix`条件的），全部导出到指定文件，并且加以文档描述各字段用途；接着前端需要通过 AJAX 的方式，请求到该配置文件并使用。
+在前端代码中使用到的环境变量（满足 `vite envPrefix`条件的），全部导出到指定文件，并且加以文档描述各字段用途（通过 rollup copy 插件实现）；
+
+接着前端需要通过 AJAX 的方式，请求到该配置文件并使用：
 
 ```ts
 import axios from 'axios';
