@@ -13,7 +13,8 @@
     "plugin:dev": "tsc -p . --watch",
     "plugin:build": "tsc -p .",
     "example:build": "cd example && npm run build",
-    "example:postinstall": "cd example && npm install"
+    "example:postinstall": "cd example && npm install",
+    "release": "script/release.sh"
   },
   "repository": "https://github.com/WorkPlusFE/vite-plugin-export-env-json.git",
   "author": "Hejx <531601727@qq.com>",
