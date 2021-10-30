@@ -20,10 +20,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   # build
   echo "# build"
   npm run plugin:build
-
-  git add -A
-  git commit -m "build: build $VERSION"
-
+  
   # publish
   echo "# publish"
   git push origin refs/tags/v"$VERSION"
