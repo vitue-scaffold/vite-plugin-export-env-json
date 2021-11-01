@@ -2,7 +2,7 @@
 
 🚕 After building, automatically export the json file of the client-side available properties in .env
 
-[![npm version](https://badge.fury.io/js/@w6s%2Fexport-env-json.svg)](https://badge.fury.io/js/@w6s%2Fexport-env-json) [![Test](https://github.com/WorkPlusFE/vite-plugin-export-env-json/actions/workflows/test.yml/badge.svg)](https://github.com/WorkPlusFE/vite-plugin-export-env-json/actions/workflows/test.yml)
+[![npm version](https://badge.fury.io/js/@vitue%2Fexport-env-json.svg)](https://badge.fury.io/js/@vitue%2Fexport-env-json) [![Test](https://github.com/WorkPlusFE/vite-plugin-export-env-json/actions/workflows/test.yml/badge.svg)](https://github.com/WorkPlusFE/vite-plugin-export-env-json/actions/workflows/test.yml)
 
 ## 动机
 
@@ -42,17 +42,17 @@ export default (): Promise<string> => {
 > 需要 Vite@2+ 版本。
 
 ```bash
-yarn add @w6s/export-env-json -D
+yarn add @vitue/export-env-json -D
 
 # npm
-npm install --save-dev @w6s/export-env-json
+npm install --save-dev @vitue/export-env-json
 ```
 
 ## 使用
 
 ```js
 // vite.config.ts/.js
-import { ExportEnvJson } from '@w6s/export-env-json';
+import { ExportEnvJson } from '@vitue/export-env-json';
 
 export default defineConfig({
   plugins: [
