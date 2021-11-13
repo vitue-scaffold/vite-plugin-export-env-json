@@ -3,18 +3,17 @@
   "description": "After building, automatically export the json file of the client-side available properties in .env",
   "version": "1.0.0-beta.2",
   "main": "dist/index.js",
-  "type": "module",
   "publishConfig": {
     "access": "public"
   },
   "files": [
-    "src",
     "dist"
   ],
   "scripts": {
+    "clean": "rimraf dist",
+    "plugin:dev": "tsup src/index.ts --dts --format cjs,esm --watch",
+    "plugin:build": "npm run clean && tsup src/index.ts --dts --format cjs,esm",
     "build": "npm run plugin:build && npm run example:build",
-    "plugin:dev": "tsc -p . --watch",
-    "plugin:build": "tsc -p .",
     "example:build": "cd example && npm run build",
     "example:postinstall": "cd example && npm install",
     "release": "script/release.sh"
@@ -34,7 +33,9 @@
   },
   "devDependencies": {
     "@types/node": "^16.11.6",
-    "typescript": "^4.5.0-beta"
+    "rimraf": "^3.0.2",
+    "tsup": "^5.7.0",
+    "typescript": "^4.2.4"
   },
   "dependencies": {
     "@types/chalk": "^2.2.0",

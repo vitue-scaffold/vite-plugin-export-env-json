@@ -1,17 +1,18 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "module": "ESNext",
-    "target": "ESNext",
-    "lib": ["ESNext"],
-    "esModuleInterop": true,
-    "strict": true,
-    "strictNullChecks": true,
+    "target": "esnext",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
+    "strict": true,
+    "declaration": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
     "outDir": "dist",
-    "rootDir": "src/"
+    "module": "commonjs",
+    "lib": ["ESNext"],
+    "types": ["vite/client", "node"],
+    "sourceMap": false,
+    "noEmitOnError": true
   },
-  "include": ["./src/"],
-  "exclude": ["**/dist", "**/node_modules", "**/example"]
+  "include": ["./src"],
+  "exclude": ["**/dist", "**/node_modules"]
 }
