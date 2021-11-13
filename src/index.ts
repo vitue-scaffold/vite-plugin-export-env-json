@@ -3,7 +3,7 @@ import { Plugin, ResolvedConfig } from 'vite';
 import { writeJSON, existsSync, createFileSync } from 'fs-extra';
 import chalk from 'chalk';
 
-const name = '@w6s/export-env-json';
+const name = '@vitue/export-env-json';
 const logInfo = (info: string) => console.log(`${chalk.blue(name)}`, chalk.green(info));
 const logError = (info: string, err: Error) => console.log(`${chalk.blue(name)}`, chalk.red(info), err);
 
