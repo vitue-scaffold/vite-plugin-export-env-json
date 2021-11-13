@@ -1,7 +1,7 @@
 {
   "name": "@vitue/export-env-json",
   "description": "After building, automatically export the json file of the client-side available properties in .env",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "publishConfig": {
     "access": "public"
