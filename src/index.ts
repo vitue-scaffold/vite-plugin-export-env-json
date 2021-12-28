@@ -60,10 +60,10 @@ export const ExportEnvJson = (options?: IExportEnvJson): Plugin => {
     },
 
     closeBundle() {
-      const output = path.join(config.root, outDir, fileName);
+      const output = path.resolve(config.root, outDir);
 
       createOutDirPathIfNotExist(output);
-      writeJSON(output, getAvailableProperties(config), (err) => {
+      writeJSON(path.join(output, fileName), getAvailableProperties(config), (err) => {
         if (err) return logError('Failed to create!', err);
         logInfo(`Successfully created '${fileName}'.`);
         logInfo(`Generated to '${path.relative(config.root, output)}'`);
