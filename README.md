@@ -39,7 +39,7 @@ export default (): Promise<string> => {
 
 ## 安装
 
-> 需要 Vite@2+ 版本。
+> 需要 Vite@2.7+ 版本。
 
 ```bash
 yarn add @vitue/export-env-json -D
